@@ -1,0 +1,8 @@
+---
+
+- name: test shell module
+  hosts: webservers
+  sudo: root
+  tasks:
+    - name: run shell for df -h
+      shell: df -h >> /tmp/df.txt

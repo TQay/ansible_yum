@@ -1,0 +1,11 @@
+---
+
+- name: second test
+  hosts: webservers
+  sudo: True
+  tasks:
+    - name: service ftp
+      yum: name=ftp update_cache=yes
+ 
+    - name: service start
+      service: name=vsftpd state=restarted

@@ -1,0 +1,14 @@
+---
+
+- name: copy module
+  hosts: webservers
+  sudo: True
+  tasks: 
+
+   - name: copying files
+     copy:
+       src: /root/playbooks
+       dest: /tmp/playbooks
+       owner: root
+       group: root
+       mode: 0750

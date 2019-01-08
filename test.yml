@@ -1,0 +1,8 @@
+---
+
+- name: installing with yum
+  hosts: webservers
+  sudo: True
+  tasks:
+    - name: install tree
+      yum: name=tree update_cache=yes

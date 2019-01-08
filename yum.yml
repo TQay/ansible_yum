@@ -1,0 +1,24 @@
+---
+
+- name: Installing/Unintsalling Package and Choosing Service state in selected hosts
+  hosts: webservers
+  remote_user: root
+  tasks: 
+   
+   - name: Installing httpd
+     yum:
+       name: "{{package_name}}"
+       state: "{{package_state}}"
+
+   - block: 
+      - name: Starting http service 
+        service: 
+          name: "{{package_name}}"
+          state: "{{service_state}}"
+     when: change_state == "yes"
+
+#   - name: Starting http service 
+#     service: 
+#       name: httpd
+#       state: stopped
+#     when: package_state = "present"
