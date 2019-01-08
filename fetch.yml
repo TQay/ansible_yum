@@ -1,0 +1,12 @@
+---
+
+- name: fetch 
+  hosts: webservers
+  remote_user: root
+
+  tasks:
+
+    - name: fetch file 
+      fetch: 
+        src: /root/fetchtest
+        dest: /tmp/fetchtest
