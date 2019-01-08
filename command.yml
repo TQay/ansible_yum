@@ -1,0 +1,11 @@
+---
+
+- name: test command module
+  hosts: webservers
+  sudo: True
+  tasks:
+
+    - name: creating yml dir
+      command: /bin/mkdir 
+      args: 
+        creates: /tmp/ymldir
