@@ -9,4 +9,4 @@
     - name: fetch file 
       fetch: 
         src: /root/fetchtest
-        dest: /tmp/fetchtest
+        dest: /tmp2/fetchtest
