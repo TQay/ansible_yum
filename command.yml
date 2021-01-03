@@ -8,4 +8,4 @@
     - name: creating yml dir
       command: /bin/mkdir 
       args: 
-        creates: /tmp3/ymldir
+        creates: /tmp/ymldir
